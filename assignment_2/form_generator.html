@@ -7,7 +7,11 @@
 			margin-top: 20px;
 			margin-bottom: 20px;
 		}
+
+
 	</style>
+
+<h1>Team Peer Evaluation<h1>
 
 <script>
 
@@ -31,7 +35,7 @@ function validateForm() {
 		req += "\n Overall Grade is required";
 	}
 
-
+*/
 
 if(document.forms["Evaluation"]["name1"].value == "" == true &&
 		document.forms["Evaluation"]["grade1"].value == "" == false){
@@ -104,7 +108,7 @@ if((document.forms["Evaluation"]["name6"].value == "") == false &&
 
 	req += "\n Member #6 is missing a name field"
 }
-*/
+
 
 	if(req != ""){
 		alert(req);
@@ -164,12 +168,20 @@ if((document.forms["Evaluation"]["name6"].value == "") == false &&
 	<input type="radio" name="grade6" value="Unsatisfactory"> Unsatisfactory<br>
 	<input type="radio" name="grade6" value="Absent"> Absent<br><br>
 
-	Overall Team Grade:
-	<input type="radio" name="grade" value="5"> A
-	<input type="radio" name="grade" value="4"> B
-	<input type="radio" name="grade" value="3"> C
-  <input type="radio" name="grade" value="2"> D
-  <input type="radio" name="grade" value="1"> F <br><br>
+	Overall Team Grade:<br>
+	<input type="radio" name="grade" value="A"> A+
+	<input type="radio" name="grade" value="A"> A
+	<input type="radio" name="grade" value="A-"> A- <br>
+	<input type="radio" name="grade" value="B+"> B+
+	<input type="radio" name="grade" value="B"> B
+	<input type="radio" name="grade" value="B-"> B- <br>
+	<input type="radio" name="grade" value="C+"> C+
+	<input type="radio" name="grade" value="C"> C
+	<input type="radio" name="grade" value="C-"> C- <br>
+	<input type="radio" name="grade" value="D+"> D+
+  <input type="radio" name="grade" value="D"> D
+	<input type="radio" name="grade" value="D-"> D- <br>
+  <input type="radio" name="grade" value="F"> F <br><br>
 
 	<input type="submit">
 
