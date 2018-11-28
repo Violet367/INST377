@@ -12,7 +12,44 @@
 <script>
 
 function validateForm() {
-    // write code to validate your forms
+
+	var req = "";
+
+/*	if (document.forms["Evaluation"]["teamName"].value == "") {
+		req += "\n Team Project Name is required";
+	}
+
+	if(document.forms["Evaluation"]["start"].value == ""){
+		req += "\n Start Time is required";
+	}
+
+	if(document.forms["Evaluation"]["end"].value == ""){
+		req += "\n End Time is required";
+	}
+
+	if(document.forms["Evaluation"]["grade"].value == ""){
+		req += "\n Overall Grade is required";
+	}
+
+*/
+
+if(document.forms["Evaluation"]["name1"].value == "" == true &&
+		document.forms["Evaluation"]["grade1"].value == "" == false){
+
+	req += "\n Member #1 is missing a grade field"
+		}
+
+if((document.forms["Evaluation"]["name1"].value == "") == false &&
+	 (document.forms["Evaluation"]["grade1"].value == "") == true){
+
+	req += "\n Member #1 is missing a name field"
+}
+
+	if(req != ""){
+		alert(req);
+		return false;
+	}
+
 }
 
 </script>
@@ -21,7 +58,7 @@ function validateForm() {
 <body>
 
 	<!-- Create Your Form Below -->
-<form action = "form_processor.php" method = "POST">
+<form name = "Evaluation" action = "form_processor.php" method = "POST" onsubmit="return validateForm();">
 
 	Team Project Name: <input type="text" name="teamName" > <br><br>
 	Starting Time: <input type="datetime-local" name="start">
@@ -29,7 +66,8 @@ function validateForm() {
 	Notes<br>
 	<textarea rows="4" cols="50"></textarea><br><br>
 
-	Member Evaluation #1<br>
+	Member Evaluation #1 <br>
+ 	Name: <input type="text" name="name1" > <br><br>
 	<input type="radio" name="grade1" value="Above and Beyond" > Above and Beyond<br>
 	<input type="radio" name="grade1" value="Satisfactory"> Satisfactory<br>
 	<input type="radio" name="grade1" value="Unsatisfactory"> Unsatisfactory<br>
@@ -61,11 +99,11 @@ function validateForm() {
 	<input type="radio" name="grade6" value="Absent"> Absent<br><br>
 
 	Overall Team Grade:
-	<input type="radio" name="grade" value="A">
-	<input type="radio" name="grade" value="B">
-	<input type="radio" name="grade" value="C">
-  <input type="radio" name="grade" value="D">
-  <input type="radio" name="grade" value="F"><br><br>
+	<input type="radio" name="grade" value="5"> A
+	<input type="radio" name="grade" value="4"> B
+	<input type="radio" name="grade" value="3"> C
+  <input type="radio" name="grade" value="2"> D
+  <input type="radio" name="grade" value="1"> F <br><br>
 
 	<input type="submit">
 
