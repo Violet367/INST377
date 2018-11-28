@@ -31,7 +31,7 @@ function validateForm() {
 		req += "\n Overall Grade is required";
 	}
 
-*/
+
 
 if(document.forms["Evaluation"]["name1"].value == "" == true &&
 		document.forms["Evaluation"]["grade1"].value == "" == false){
@@ -44,6 +44,67 @@ if((document.forms["Evaluation"]["name1"].value == "") == false &&
 
 	req += "\n Member #1 is missing a name field"
 }
+
+if(document.forms["Evaluation"]["name2"].value == "" == true &&
+		document.forms["Evaluation"]["grade2"].value == "" == false){
+
+	req += "\n Member #2 is missing a grade field"
+		}
+
+if((document.forms["Evaluation"]["name2"].value == "") == false &&
+	 (document.forms["Evaluation"]["grade2"].value == "") == true){
+
+	req += "\n Member #2 is missing a name field"
+}
+
+if(document.forms["Evaluation"]["name3"].value == "" == true &&
+		document.forms["Evaluation"]["grade3"].value == "" == false){
+
+	req += "\n Member #3 is missing a grade field"
+		}
+
+if((document.forms["Evaluation"]["name3"].value == "") == false &&
+	 (document.forms["Evaluation"]["grade3"].value == "") == true){
+
+	req += "\n Member #3 is missing a name field"
+}
+
+if(document.forms["Evaluation"]["name4"].value == "" == true &&
+		document.forms["Evaluation"]["grade4"].value == "" == false){
+
+	req += "\n Member #4 is missing a grade field"
+		}
+
+if((document.forms["Evaluation"]["name4"].value == "") == false &&
+	 (document.forms["Evaluation"]["grade4"].value == "") == true){
+
+	req += "\n Member #4 is missing a name field"
+}
+
+if(document.forms["Evaluation"]["name5"].value == "" == true &&
+		document.forms["Evaluation"]["grade5"].value == "" == false){
+
+	req += "\n Member #5 is missing a grade field"
+		}
+
+if((document.forms["Evaluation"]["name5"].value == "") == false &&
+	 (document.forms["Evaluation"]["grade5"].value == "") == true){
+
+	req += "\n Member #5 is missing a name field"
+}
+
+if(document.forms["Evaluation"]["name6"].value == "" == true &&
+		document.forms["Evaluation"]["grade6"].value == "" == false){
+
+	req += "\n Member #6 is missing a grade field"
+		}
+
+if((document.forms["Evaluation"]["name6"].value == "") == false &&
+	 (document.forms["Evaluation"]["grade6"].value == "") == true){
+
+	req += "\n Member #6 is missing a name field"
+}
+*/
 
 	if(req != ""){
 		alert(req);
@@ -66,33 +127,38 @@ if((document.forms["Evaluation"]["name1"].value == "") == false &&
 	Notes<br>
 	<textarea rows="4" cols="50"></textarea><br><br>
 
-	Member Evaluation #1 <br>
+	Member #1 Evaluation<br>
  	Name: <input type="text" name="name1" > <br><br>
 	<input type="radio" name="grade1" value="Above and Beyond" > Above and Beyond<br>
 	<input type="radio" name="grade1" value="Satisfactory"> Satisfactory<br>
 	<input type="radio" name="grade1" value="Unsatisfactory"> Unsatisfactory<br>
 	<input type="radio" name="grade1" value="Absent"> Absent<br><br>
-	Member Evalution #2<br>
+	Member #2 Evaluation<br>
+	Name: <input type="text" name="name2" > <br><br>
 	<input type="radio" name="grade2" value="Above and Beyond" > Above and Beyond<br>
 	<input type="radio" name="grade2" value="Satisfactory"> Satisfactory<br>
 	<input type="radio" name="grade2" value="Unsatisfactory"> Unsatisfactory<br>
 	<input type="radio" name="grade2" value="Absent"> Absent<br><br>
-	Member Evaluation #3<br>
+	Member #3 Evaluation<br>
+	Name: <input type="text" name="name3" > <br><br>
 	<input type="radio" name="grade3" value="Above and Beyond" > Above and Beyond<br>
 	<input type="radio" name="grade3" value="Satisfactory"> Satisfactory<br>
 	<input type="radio" name="grade3" value="Unsatisfactory"> Unsatisfactory<br>
 	<input type="radio" name="grade3" value="Absent"> Absent<br><br>
-	Member Evaluation #4<br>
+	Member #4 Evaluation<br>
+	Name: <input type="text" name="name4" > <br><br>
 	<input type="radio" name="grade4" value="Above and Beyond" > Above and Beyond<br>
 	<input type="radio" name="grade4" value="Satisfactory"> Satisfactory<br>
 	<input type="radio" name="grade4" value="Unsatisfactory"> Unsatisfactory<br>
 	<input type="radio" name="grade4" value="Absent"> Absent<br><br>
-	Member Evaluation #5<br>
+	Member #5 Evaluation<br>
+	Name: <input type="text" name="name5" > <br><br>
 	<input type="radio" name="grade5" value="Above and Beyond" > Above and Beyond<br>
 	<input type="radio" name="grade5" value="Satisfactory"> Satisfactory<br>
 	<input type="radio" name="grade5" value="Unsatisfactory"> Unsatisfactory<br>
 	<input type="radio" name="grade5" value="Absent"> Absent<br><br>
-	Member Evaluation #6<br>
+	Member #6 Evaluation<br>
+	Name: <input type="text" name="name6" > <br><br>
 	<input type="radio" name="grade6" value="Above and Beyond" > Above and Beyond<br>
 	<input type="radio" name="grade6" value="Satisfactory"> Satisfactory<br>
 	<input type="radio" name="grade6" value="Unsatisfactory"> Unsatisfactory<br>
