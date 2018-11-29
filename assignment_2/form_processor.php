@@ -47,14 +47,59 @@ echo "Overall Grade: " . $grade . "<br>";
 $datetime = date_diff($startTime, $endTime);
 echo $datetime->format('%i minute presentation');
 
+function LetterGrade($value){
 
+	$letterNum = array('A+' => 1, 'A'=> 2, 'A-'=>3, 'B+'=>4, 'B'=>5, 'B-'=>6,
+	'C+' =>7, 'C'=> 8, 'C-'=>9, 'D+'=>10, 'D'=>11, 'D-'=>12, 'F'=> 13);
 
-if(mem1 != null){  #stopped here
+	$numLetter = array(1 => 'A+', 2 => 'A', 3=>'A-', 4=>'B+', 5=>'B', 6=>'B-',
+	7 => 'C+', 'C'=> 8, 'C-'=>9, 'D+'=>10, 'D'=>11, 'D-'=>12, 'F'=> 13);
 
-echo $mem1 ." receives an " . "<br>";
+	$num = $letterNum[$grade];
 
+	switch ($value) {
+
+		case 'Above and Beyond':
+			echo '1';
+			echo $grade;
+			return $grade;
+			break;
+
+		case 'Satisfactory':
+			if($grade != 'F'){
+				return $numLetter[$num+1];
+			}else{
+				return $grade;
+			}
+			break;
+
+		case 'Unsatisfactory':
+			if($num <= 10){
+				return $numLetter[$num+3];
+			}else{
+				return 'F';
+			}
+			break;
+
+		case 'Absent':
+			return 'F';
+			break;
+
+		default:
+			return 'F';
+			break;
+	}
 
 }
+
+
+
+if(!empty($mem1)){
+
+  echo "<br>" . $mem1 . " receives an " . LetterGrade($mem1Grade) . "<br>";
+}
+
+
 
 
 ?>

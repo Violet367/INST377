@@ -8,6 +8,9 @@
 			margin-bottom: 20px;
 		}
 
+		background {
+
+		}
 
 	</style>
 
@@ -19,19 +22,19 @@ function validateForm() {
 
 	var req = "";
 
-/*	if (document.forms["Evaluation"]["teamName"].value == "") {
+/*if (empty(document.forms["Evaluation"]["teamName"].value)) {
 		req += "\n Team Project Name is required";
 	}
 
-	if(document.forms["Evaluation"]["start"].value == ""){
+	if(empty(document.forms["Evaluation"]["start"].value)){
 		req += "\n Start Time is required";
 	}
 
-	if(document.forms["Evaluation"]["end"].value == ""){
+	if(empty(document.forms["Evaluation"]["end"].value)){
 		req += "\n End Time is required";
 	}
 
-	if(document.forms["Evaluation"]["grade"].value == ""){
+	if(empty(document.forms["Evaluation"]["grade"].value)){
 		req += "\n Overall Grade is required";
 	}
 
@@ -169,7 +172,7 @@ if((document.forms["Evaluation"]["name6"].value == "") == false &&
 	<input type="radio" name="grade6" value="Absent"> Absent<br><br>
 
 	Overall Team Grade:<br>
-	<input type="radio" name="grade" value="A"> A+
+	<input type="radio" name="grade" value="A+"> A+
 	<input type="radio" name="grade" value="A"> A
 	<input type="radio" name="grade" value="A-"> A- <br>
 	<input type="radio" name="grade" value="B+"> B+
