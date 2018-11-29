@@ -22,7 +22,7 @@ function validateForm() {
 
 	var req = "";
 
-/*if (empty(document.forms["Evaluation"]["teamName"].value)) {
+if (empty(document.forms["Evaluation"]["teamName"].value)) {
 		req += "\n Team Project Name is required";
 	}
 
@@ -37,8 +37,6 @@ function validateForm() {
 	if(empty(document.forms["Evaluation"]["grade"].value)){
 		req += "\n Overall Grade is required";
 	}
-
-*/
 
 if(document.forms["Evaluation"]["name1"].value == "" == true &&
 		document.forms["Evaluation"]["grade1"].value == "" == false){
@@ -132,7 +130,7 @@ if((document.forms["Evaluation"]["name6"].value == "") == false &&
 	Starting Time: <input type="datetime-local" name="start">
 	Ending Time: <input type="datetime-local" name="end"><br><br>
 	Notes<br>
-	<textarea rows="4" cols="50"></textarea><br><br>
+  <textarea rows="4" cols="50" name ="notes"></textarea><br><br>
 
 	Member #1 Evaluation<br>
  	Name: <input type="text" name="name1" > <br><br>
